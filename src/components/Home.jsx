@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import './LandingPage.css'
+import './Home.css'
 import { GetRequestNPM } from './GetRequestNPM'
 
 import PersonalTitleMessage from './PersonalTitleMessage'
 
-class Landing extends Component {
+class Home extends Component {
   render() {
     return (
       <div id='home'>
@@ -34,4 +34,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing
+export default Home

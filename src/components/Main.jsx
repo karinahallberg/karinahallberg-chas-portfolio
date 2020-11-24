@@ -1,13 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import LandingPage from './LandingPage'
+import Home from './Home'
 import About from './About'
-// import Scribble from './Scribble'
 import Board from './Board'
 
 const Main = () => (
   <Switch>
-    <Route exact path='/' component={LandingPage} />
+    <Route exact path='/' component={Home} />
     <Route path='/about' component={About} />
     <Route path='/articles' component={Board} />
   </Switch>
