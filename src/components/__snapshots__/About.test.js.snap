@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button changes color when hovered over 1`] = `
+<a
+  href="https://twitter.com/HallbergKarina"
+>
+  Twitter
+</a>
+`;
+
+exports[`Creating a snapshot 1`] = `
+<a
+  href="https://twitter.com/HallbergKarina"
+>
+  Twitter
+</a>
+`;
+
+exports[`Link changes color when hovered 1`] = `
+<a
+  href="https://twitter.com/HallbergKarina"
+>
+  Twitter
+</a>
+`;

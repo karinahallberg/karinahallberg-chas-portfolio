@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl'
+import Main from './components/Main'
+import { Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const { isLightTheme, light, dark } = this.context
+    const theme = isLightTheme ? light : dark
+    return (
+      <Router>
+        <div className='demo-big-content'>
+          <Layout>
+            <Header title='Karina Hallberg' scroll>
+              <Navigation>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/articles'>Articles</Link>
+              </Navigation>
+            </Header>
+            <Drawer title='Karina Hallberg'>
+              <Navigation>
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/articles'>Articles</Link>
+              </Navigation>
+            </Drawer>
+            <Content>
+              <div className='page-content' />
+              <Main />
+            </Content>
+          </Layout>
+        </div>
+      </Router>
+    )
+  }
 }
 
-export default App;
+export default App
