@@ -19,3 +19,7 @@ hr {
   height: 100%;
   z-index: 1;
 }
+
+.error-message {
+  background-color: rgb(226, 43, 43);
+}

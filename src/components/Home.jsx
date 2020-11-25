@@ -4,6 +4,7 @@ import './Home.css'
 import { GetRequestNPM } from './GetRequestNPM'
 
 import PersonalTitleMessage from './PersonalTitleMessage'
+import ErrorBoundary from '../ErrorBoundary'
 
 class Home extends Component {
   render() {
@@ -28,7 +29,9 @@ class Home extends Component {
             </Carousel.Item>
           </Carousel>
         </div>
-        <GetRequestNPM />
+        <ErrorBoundary>
+          <GetRequestNPM />
+        </ErrorBoundary>
       </div>
     )
   }

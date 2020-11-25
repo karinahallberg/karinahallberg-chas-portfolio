@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 export const ArticleContext = createContext()
 
 const ArticleContextProvider = (props) => {
-  const [articles, setArticles] = useState([
+  const [articles, setArticles, error] = useState([
     {
       title: 'Learning React',
       description: 'Beginners guide how to build a portfolio',
@@ -25,6 +25,12 @@ const ArticleContextProvider = (props) => {
   const removeArticle = (id) => {
     setArticles(articles.filter((article) => article.id !== id))
   }
+
+  useEffect(() => {
+    if (error) {
+      throw new Error(error)
+    }
+  }, [error])
 
   return (
     <ArticleContext.Provider value={{ articles, addArticle, removeArticle }}>
